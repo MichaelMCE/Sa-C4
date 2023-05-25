@@ -1,0 +1,28 @@
+APP_0_ICON			ICON	"icons/sa-c4.ico"
+
+
+#define VERSION_NUMBER		0,24,03,2023
+
+1 VERSIONINFO
+FILETYPE 2
+FILEOS 4
+FILEVERSION VERSION_NUMBER
+BEGIN
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "180904e4"
+    BEGIN
+      VALUE "ProductName", "Sa-C4"
+      VALUE "FileVersion", "0.24.03.2023"
+      VALUE "ProductVersion", "1.0"
+      VALUE "FileDescription", "C4 Synth interrogator"
+      VALUE "LegalCopyright", "Copyright \251 2023 M.M."
+      VALUE "OriginalFilename", "sa-c4.exe"
+    END
+  END
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0x1809, 1252
+  END
+END
+
