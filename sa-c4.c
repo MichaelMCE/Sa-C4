@@ -415,7 +415,7 @@ void printPresetStruct (as_preset_t *preset)
 	printStrColVar1("output_balance ", "%i", c, preset->level.output_balance);
 	printf("\n");
 	
-	for (int i = 0; i < AS_VOICE_TOTAL; i++){
+	for (int i = 0; i < AS_FILTER_TOTAL; i++){
 		printStrColVar1(" Filter: ", "%i", c, i+1);
 		printStrColVar1("depth            ", "%i", c, preset->filter[i].depth);
 		printStrColVar1("frequency        ", "%i", c, preset->filter[i].frequency);
