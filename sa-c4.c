@@ -414,7 +414,24 @@ void printPresetStruct (as_preset_t *preset)
 	printStrColVar1("output         ", "%i", c, preset->level.output);
 	printStrColVar1("output_balance ", "%i", c, preset->level.output_balance);
 	printf("\n");
-	
+
+   	for (int i = 0; i < AS_VOICE_TOTAL; i++){
+		printStrColVar1(" Voice: ", "%i", c, i+1);
+		printStrColVar1("level           ", "%i", c, preset->voice[i].level);
+		printStrColVar1("pan             ", "%i", c, preset->voice[i].pan);
+		printStrColVar1("detune          ", "%i", c, preset->voice[i].detune);
+		printStrColVar1("tremolo         ", "%i", c, preset->voice[i].tremolo);
+		printStrColVar1("octave          ", "%i", c, preset->voice[i].octave);
+		printStrColVar1("semitone        ", "%i", c, preset->voice[i].semitone);
+		printStrColVar1("mode            ", "%i", c, preset->voice[i].mode);
+		printStrColVar1("source          ", "%i", c, preset->voice[i].source);
+		printStrColVar1("envelope        ", "%i", c, preset->voice[i].envelope);
+		printStrColVar1("destination     ", "%i", c, preset->voice[i].destination);
+		printStrColVar1("tremolo_source  ", "%i", c, preset->voice[i].tremolo_source);
+		printStrColVar1("modulate        ", "%i", c, preset->voice[i].modulate);
+		printStrColVar1("enable          ", "%i", c, preset->voice[i].enable);
+	}
+    
 	for (int i = 0; i < AS_FILTER_TOTAL; i++){
 		printStrColVar1(" Filter: ", "%i", c, i+1);
 		printStrColVar1("depth            ", "%i", c, preset->filter[i].depth);
