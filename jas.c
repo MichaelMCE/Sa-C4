@@ -760,6 +760,17 @@ const char *jas_getPresetUserName (presets_t *presets, const int presetIdx)
 	return NULL;
 }
 
+const char *jas_getPresetCreatorName (presets_t *presets, const int presetIdx)
+{
+	preset_t *preset = jas_getPreset(presets, presetIdx);
+	if (preset){
+		void const *data = presetGetStr(preset, PRESET_CREATORNAME);
+		//if (data) return strdup(data);
+		if (data) return (void*)data;
+	}
+	return NULL;
+}
+
 const char *jas_getPresetEffectName (presets_t *presets, const int presetIdx)
 {
 	preset_t *preset = jas_getPreset(presets, presetIdx);
