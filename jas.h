@@ -13,6 +13,7 @@
 const char *jas_getPresetDesc (presets_t *presets, const int presetIdx);
 const char *jas_getPresetName (presets_t *presets, const int presetIdx);
 const char *jas_getPresetUserName (presets_t *presets, const int presetIdx);
+const char *jas_getPresetCreatorName (presets_t *presets, const int presetIdx);
 const char *jas_getPresetEffectName (presets_t *presets, const int presetIdx);
 const char *jas_getPresetURL (presets_t *presets, const int presetIdx);
 const char *jas_getPresetXml (presets_t *presets, const int presetIdx);
