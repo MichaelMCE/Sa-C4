@@ -296,7 +296,15 @@ static void printJsonPresetList (as_t *as_ctx, void *buffer, const int listFrom)
 			printStrStr("PresetName: ", "%s", c, jas_getPresetName(presets, i));
 			printStrStr("Desc: ", "%s", c, jas_getPresetDesc(presets, i));
 			printStrStr("EffectName: ", "%s", c, jas_getPresetEffectName(presets, i));
-			printStrStr("UserName: ", "%s", c, jas_getPresetUserName(presets, i));
+			
+			char *name = (char*)jas_getPresetUserName(presets, i);
+			if (name){
+				printStrStr("UserName: ", "%s", c, name);	
+			}else{
+				name = (char*)jas_getPresetCreatorName(presets, i);
+				if (!name) name = "<>";
+				printStrStr("CreatorName: ", "%s", c, name);
+			}
 		}
 		jas_free(presets);
 	}
